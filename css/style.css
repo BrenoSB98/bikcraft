@@ -100,6 +100,11 @@ h1::before {
   font-size: 2rem;
 }
 
+.introducao-cover img{
+  object-fit: cover;
+  height: 100%;
+}
+
 .botao {
   background-color: #ee2211;
   padding: 0.9375rem 1.25rem;
@@ -144,4 +149,80 @@ h1::before {
 }
 .vantagens-itens p {
   grid-column: 2;
+}
+
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+  .introducao {
+    text-align: left;
+    justify-items: start;
+  }
+
+  h1::before {
+    display: none;
+  }
+
+  .introducao {
+    text-align: left;
+    justify-items: start;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    padding-top: 20px;
+  }
+
+  .header {
+    gap: 30px;
+  }
+
+  .subtitulo {
+    font-size: 3.2rem;
+  }
+
+  .introducao h1 {
+    font-size: 1.7rem;
+  }
+
+  .menu a {
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+  }
+
+  .botao {
+    padding: 0.7rem 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitulo {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .menu a {
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+  }
+  .introducao h1 {
+    font-size: 1.7rem;
+  }
+
+  .botao {
+    padding: 0.7rem 1rem;
+  }
 }
